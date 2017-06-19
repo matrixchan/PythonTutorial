@@ -1,0 +1,99 @@
+# Python 简易教程 
+#### 要点
+* 开发环境搭建 
+* 开发工具
+* 基本语法
+* 函数
+* 习题
+
+		备注：本教程的Python版本为3.x
+		
+		
+### 开发环境搭建
+Python是一种解释型语言，所谓解释型语言，通俗来说是指我们编写好的代码以文本形式保存，要运行代码时候，需要该语言的解释器读取代码文本，解释为计算机能执行的指令。Python的源代码文件后缀名为.py，当要运行python的源代码时候，需要它的解释器解释执行。由于Python语言从规范到解释器都是开源的，理论上来说，任何人只要有足够水平都可以编写Python的解释器，但是此实现难度相当高。我们不需要自己去实现其解释器，可以从www.python.org官网下载安装即可。
+
+
+从[官方网站 www.python.org](https://www.python.org/downloads/)根据自己所使用的电脑操作系统下载对应的python的解释器安装。
+
+![下载](pic/python.org.png)
+
+
+### 开发工具
+##### 文本编辑器
+* [Visual Studio Code](https://code.visualstudio.com/download)
+	
+	安装好VScode后，再安装python的扩展。
+ 	参考：<https://code.visualstudio.com/docs/languages/python> 	
+ 	如图,在输入框里面输入python，会出现相关的扩展选项，最后安装红色方框里面的扩展：
+ 	
+ 	![安装扩展](pic/install_extand_for_python.png)
+ 	
+ 	
+
+	
+* [Sublime Text](http://www.sublimetext.com/)
+
+		备注：本教程使用的编辑器为Visual Studio Code
+		
+##### 代码管理工具:git
+
+		
+	GitHub是一个通过Git进行版本控制的软件源代码托管服务。它提供付费和免费两种账户服务，两种账户的区别是付费账户可以创建私有代码仓库。
+		
+
+1. 到[www.github.com](https://github.com) 注册账号。
+2. 创建一个工程，如图：
+	![create a github project](pic/create_a_github_project.png)
+3. 接着，创建代码仓库，如图：
+	![create a new repository](pic/create_a_new_repository.png)
+4. 初始化代码仓库，提交到刚刚在github上创建的工程中，相关指令如图：
+	![create a new repostory on the command line](pic/create_a_new_repository_on_the_command_line.png)
+	由于我们是提交新建的代码仓库，所以选择红色方框里面的命令，去初始化仓库，添加内容，已经提交到github。
+	
+	以下对相关指令对解释
+
+```
+	使用命令行终端进入到本地创建的工程文件夹后执行如下指令:
+	echo "# PythonTutorial" >> README.md    #创建内容为"PythonTutorial" 的README.md文件
+  	git init #初始划代码仓库
+  	git add README.md #把文件 README.md添加到代码仓库
+  	git commit -m "first commit" ＃把文件提交到仓库
+  	git remote add origin https://github.com/matrixchan/PythonTutorial.git #把现在的仓库连接到刚刚在github上创建的仓库
+  	git push -u origin master ＃提交到github
+
+```  
+
+
+
+
+
+
+
+
+
+
+
+### 基本语法
+
+			
+	* 基本数据类型和变量
+	* 运算符
+	* 条件判断语句
+	* 循环语句
+	* 数据结构:列表，元组和字典
+	* 函数
+	
+#### 基本数据类型和变量
+
+##### 整型
+
+在程序中，整数的表示方法和数学上的写法一模一样，例如：1,100,0,-10等等。
+有时候会使用十六进制表示整数，十六进制用0x前缀和0-9，a-f表示，例如：0xff00，0xa5b4c3d2等等。
+			
+###### 浮点型
+浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，比如，1.23x109和12.3x108是完全相等的。浮点数可以用数学写法，如1.23，3.14，-9.01，等等。但是对于很大或很小的浮点数，就必须用科学计数法表示，把10用e替代，1.23x109就是1.23e9，或者12.3e8，0.000012可以写成1.2e-5，等等。
+
+整数和浮点数在计算机内部存储的方式是不同的，整数运算永远是精确的（除法难道也是精确的？是的！），而浮点数运算则可能会有四舍五入的误差。
+
+ 
+
