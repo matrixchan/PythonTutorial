@@ -42,17 +42,22 @@ Python是一种解释型语言，所谓解释型语言，通俗来说是指我�
 		
 
 1. 到[www.github.com](https://github.com) 注册账号。
-2. 创建一个工程，如图：
+2. 创建并添加key到账号.
+	```
+	具体参考：https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-windows
+	注意：根据自己不同的操作系统平台选择相应的操作
+	```
+3. 创建一个工程，如图：
 	![create a github project](pic/create_a_github_project.png)
-3. 接着，创建代码仓库，如图：
+4. 接着，创建代码仓库，如图：
 	![create a new repository](pic/create_a_new_repository.png)
-4. 初始化代码仓库，提交到刚刚在github上创建的工程中，相关指令如图：
+5. 初始化代码仓库，提交到刚刚在github上创建的工程中，相关指令如图：
 	![create a new repostory on the command line](pic/create_a_new_repository_on_the_command_line.png)
 	由于我们是提交新建的代码仓库，所以选择红色方框里面的命令，去初始化仓库，添加内容，已经提交到github。
 	
 	以下对相关指令对解释
 
-```
+	```
 	使用命令行终端进入到本地创建的工程文件夹后执行如下指令:
 	echo "# PythonTutorial" >> README.md    #创建内容为"PythonTutorial" 的README.md文件
   	git init #初始划代码仓库
@@ -60,8 +65,26 @@ Python是一种解释型语言，所谓解释型语言，通俗来说是指我�
   	git commit -m "first commit" ＃把文件提交到仓库
   	git remote add origin https://github.com/matrixchan/PythonTutorial.git #把现在的仓库连接到刚刚在github上创建的仓库
   	git push -u origin master ＃提交到github
+		
+	```  
 
-```  
+	以下是我本机上的操作截图，有部分语句与上面不一致.	截图里面我使用了"git add .",是因为我想把该工程文件夹下所有的文件一起提交到仓库里。
+	而“git add README.md ”单纯地把 README.md提交到仓库。
+	![push_my_reop_to_github](pic/push_my_reop_to_github.png)
+
+6. 提交成功后刷新工程所在的网页，会出现刚刚所提交的工程文件，如图：
+
+	![my_new_repo_in_github](pic/my_new_repo_in_github.png)
+
+##### 有关git的资源
+github是是用git对源代码的版本进行管理，这里涉及到有关git的基本应用。
+
+1. [git使用简易指南](books/git_guide.pdf)
+2. [Git教程 -- 廖雪峰官方网站](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+3. [Pro Git](books/progit-zh-v2.1.1.pdf) 
+4. [Git User Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
+
+	
 
 
 
